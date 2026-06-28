@@ -1,0 +1,21 @@
+[project]
+name = "lerobot_robot_sim_ur3e"
+version = "0.1.0"
+description = "A lerobot plugin for the simulated UR3e robot with a Robotiq 2F-85 gripper."
+requires-python = ">=3.12"
+
+# These are ONLY the dependencies needed for this specific robot
+dependencies = [
+    "lerobot", 
+    "lerobot-camera-mujoco",
+    "mujoco",
+    "dm-control",
+    "pin",
+]
+
+[tool.setuptools]
+packages = ["lerobot_robot_sim_ur3e", "lerobot_robot_sim_ur3e.safety"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

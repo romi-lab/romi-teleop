@@ -1,0 +1,18 @@
+[project]
+name = "lerobot_camera_mujoco"
+version = "0.1.0"
+description = "A lerobot camera plugin for MuJoCo-rendered cameras."
+requires-python = ">=3.12"
+
+dependencies = [
+    "lerobot",
+    "mujoco",
+    "opencv-python-headless",
+]
+
+[tool.setuptools]
+packages = ["lerobot_camera_mujoco"]
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"

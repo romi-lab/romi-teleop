@@ -1,0 +1,54 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Build and packaging outputs
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+env/
+.env
+.env.*
+
+# IDE and OS files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Runtime outputs and local datasets
+outputs/
+data/
+runs/
+wandb/
+videos/
+logs/
+
+# Local calibration generated on each machine
+calibration/**
+!calibration/
+!calibration/.gitkeep
+
+# Local agent/tool metadata
+.agents/
+.codex/
+CLAUDE.md
+
+# MuJoCo and local render/debug outputs
+*.mjb
+*.log

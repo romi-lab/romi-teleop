@@ -1,0 +1,17 @@
+# LeRobot from the checked-out submodule.
+#
+# `pip install -e ./third_party/lerobot` only installs LeRobot's default
+# dependencies. These extras are needed by this repository's teleoperation,
+# recording, visualization, Dynamixel/GELLO, and RealSense workflows.
+-e ./third_party/lerobot[core_scripts,dynamixel,intelrealsense]
+
+# ROMI teleoperation plugins.
+-e ./lerobot_camera_mujoco
+-e ./lerobot_teleoperator_gello
+-e ./lerobot_teleoperator_bi_gello
+-e ./lerobot_robot_ur3
+-e ./lerobot_robot_ur5e
+-e ./lerobot_robot_bi_ur3
+-e ./lerobot_robot_bi_ur5e
+-e ./lerobot_robot_sim_ur3e
+-e ./lerobot_robot_sim_bi_ur5e
