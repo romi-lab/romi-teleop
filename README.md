@@ -78,6 +78,12 @@ For real GELLO devices, make sure the Dynamixel USB adapters are visible as `/de
 
 ## Run Reset, Teleoperate, and Record
 
+### IMPORTANCE: 
+
+1. Every Time when starting the Teleoperator or Robot, You MUST delete the calibration file and re-calibrate again!
+
+2. When using the left UR3 arm in the lab, you have to DISABLE the ETHERNET/IP feature, you can find this buttom at (PROGRAM->INSTALLATION->NTHERNET/IP) every time at the beginning.
+
 Teleoperation uses real GELLO leader devices in both simulation and real-world modes, so first make sure the Dynamixel USB serial ports are accessible:
 
 ```bash
