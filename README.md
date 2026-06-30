@@ -157,3 +157,7 @@ Command-line arguments override YAML values, so quick changes can be passed dire
 ```bash
 python scripts/record.py --config configs/ur3e_sim.yaml --num-episodes 3
 ```
+
+## Reference Repo
+1. https://github.com/F-Fer/lerobot_ur5e_gello
+2. https://github.com/huggingface/lerobot
