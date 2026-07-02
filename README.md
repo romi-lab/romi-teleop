@@ -9,8 +9,7 @@ Wanna contribute? Add your own Robot, sensor, and teleoperator as Lerobot Plugin
 ```text
 .
 ├── configs                         # YAML configs for teleoperation, recording, and reset workflows.
-├── scripts                         # User-facing scripts and compatibility entrypoints.
-│   └── romi                        # Unified YAML-driven CLI for teleoperate, record, and reset.
+├── scripts                         # Unified YAML-driven CLI for teleoperate, record, and reset.
 ├── lerobot_camera_mujoco           # LeRobot camera plugin for rendering MuJoCo cameras.
 ├── lerobot_teleoperator_gello      # LeRobot teleoperator plugin for one GELLO leader device.
 ├── lerobot_teleoperator_bi_gello   # LeRobot teleoperator plugin for two GELLO leader devices.
@@ -35,7 +34,7 @@ Wanna contribute? Add your own Robot, sensor, and teleoperator as Lerobot Plugin
 Clone the repository with submodules:
 
 ```bash
-git clone --recurse-submodules git@github.com:KANZEZ/romi-teleop.git
+git clone --recurse-submodules git@github.com:romi-lab/romi-teleop.git
 cd romi-teleop
 ```
 
