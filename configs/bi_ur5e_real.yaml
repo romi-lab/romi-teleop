@@ -11,4 +11,11 @@ single_task: Describe the bimanual task here.
 num_episodes: 10
 episode_time_s: 60.0
 
-cameras: {}
+cameras:
+  d435:
+    type: realsense
+    serial_number_or_name: "317222074788"
+    width: 640
+    height: 480
+    fps: 30
+    use_depth: true

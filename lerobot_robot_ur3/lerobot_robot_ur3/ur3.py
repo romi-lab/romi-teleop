@@ -49,10 +49,13 @@ class UR3(Robot):
 
     @property
     def _cameras_ft(self) -> dict[str, tuple]:
-        return {
-            camera_name: (camera.height, camera.width, 3)
-            for camera_name, camera in self.cameras.items()
-        }
+        features: dict[str, tuple] = {}
+        for camera_name, camera in self.cameras.items():
+            if getattr(camera, "use_rgb", True):
+                features[camera_name] = (camera.height, camera.width, 3)
+            if getattr(camera, "use_depth", False):
+                features[f"{camera_name}_depth"] = (camera.height, camera.width, 1)
+        return features
 
     @cached_property
     def observation_features(self) -> dict:
@@ -138,7 +141,10 @@ class UR3(Robot):
         obs_dict["gripper"] = self._last_gripper_action
 
         for camera_name, camera in self.cameras.items():
-            obs_dict[camera_name] = camera.async_read()
+            if getattr(camera, "use_rgb", True):
+                obs_dict[camera_name] = camera.async_read()
+            if getattr(camera, "use_depth", False):
+                obs_dict[f"{camera_name}_depth"] = camera.async_read_depth()
 
         return obs_dict
 

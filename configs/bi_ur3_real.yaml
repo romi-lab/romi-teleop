@@ -14,9 +14,26 @@ display-data: false
 max-joint-delta: 0.05
 
 cameras:
-  d435:
+  d415A:
     type: realsense
-    serial_number_or_name: "317222074788"
+    serial_number_or_name: "839112062492"
     width: 640
     height: 480
-    fps: 30
+    fps: 15
+    use_depth: true
+  
+  d435I:
+    type: realsense
+    serial_number_or_name: "141222073387"
+    width: 640
+    height: 480
+    fps: 15
+    use_depth: true
+
+  d415B:
+    type: realsense
+    serial_number_or_name: "830612060457"
+    width: 640
+    height: 480
+    fps: 15
+    use_depth: true
